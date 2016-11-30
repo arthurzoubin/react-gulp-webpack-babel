@@ -9,7 +9,7 @@ Try this is a simple [React](https://facebook.github.io/react/), [Webpack](http:
 * Fork and clone the project:
 
 ```
-git clone https://github.com/arthurzoubin/react-gulp-webpack-babel.git
+git clone https://github.com/{Your_github_name}/react-gulp-webpack-babel.git
 ```
 
 * Then install the dependencies:
