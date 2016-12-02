@@ -27,9 +27,12 @@ loaders.push({
 });
 
 module.exports = {
-  entry: [
-    path.resolve(__dirname, './src/index.jsx')
-  ],
+  entry: {
+		index: [
+	    path.resolve(__dirname, './src/index.jsx')
+	  ],
+		vendor: ['react', 'react-dom']
+	},
   output: {
     path: path.resolve(__dirname, './build'),
     publicPath: '/build',
@@ -60,6 +63,9 @@ module.exports = {
     new ExtractTextPlugin('style/[contenthash].css', {
 			allChunks: true
 		}),
+		new webpack.optimize.CommonsChunkPlugin({
+      name:'vendor'
+    }),
     new HtmlWebpackPlugin({
 			template: './src/index.html'
 		}),

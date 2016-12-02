@@ -40,10 +40,12 @@ loaders.push({
 });
 
 module.exports = {
-  entry: [
-    'webpack/hot/dev-server',
-    path.resolve(__dirname, './src/index.jsx')
-  ],
+  entry: {
+		index: [
+	    'webpack/hot/dev-server',
+	    path.resolve(__dirname, './src/index.jsx')
+	  ]
+	},
   output: {
     path: path.resolve(__dirname, './build'),
     publicPath: 'http://127.0.0.1:8888/build',
