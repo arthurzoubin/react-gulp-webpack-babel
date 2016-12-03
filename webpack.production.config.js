@@ -29,7 +29,7 @@ loaders.push({
 module.exports = {
   entry: {
 		index: [
-	    path.resolve(__dirname, './src/index.jsx')
+	    path.resolve(__dirname, './src/index.js')
 	  ],
 		vendor: ['react', 'react-dom']
 	},

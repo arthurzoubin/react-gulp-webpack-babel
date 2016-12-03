@@ -43,7 +43,7 @@ module.exports = {
   entry: {
 		index: [
 	    'webpack/hot/dev-server',
-	    path.resolve(__dirname, './src/index.jsx')
+	    path.resolve(__dirname, './src/index.js')
 	  ]
 	},
   output: {
