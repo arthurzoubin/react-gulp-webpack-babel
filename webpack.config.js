@@ -48,7 +48,7 @@ module.exports = {
 	},
   output: {
     path: path.resolve(__dirname, './build'),
-    publicPath: 'http://127.0.0.1:8888/build',
+    publicPath: 'http://127.0.0.1:8888/',
     filename: 'scripts/bundle.js',
   },
   module: {

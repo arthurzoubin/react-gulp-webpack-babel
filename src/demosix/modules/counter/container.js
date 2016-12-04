@@ -1,6 +1,7 @@
 'use strict';
 
-import {increase} from './actions';
+import * as ActionsCreator from './actions';
+import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
 import Counter from './components/counter';
 
@@ -12,7 +13,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onIncreaseClick: () => dispatch(increase())
+    actions: bindActionCreators(ActionsCreator, dispatch)
   }
 }
 
