@@ -8,7 +8,6 @@ class Header extends Component {
     return(
       <div className="page-header">
         <Link to="/">
-          <span className="glyphicon glyphicon-home"></span>
           <h1>Demos</h1>
         </Link>
       </div>
