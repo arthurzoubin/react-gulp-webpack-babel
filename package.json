@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/arthurzoubin/react-gulp-webpack-babel#readme",
   "dependencies": {
+    "gulp": "^3.9.1",
     "node-sass": "^3.13.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",

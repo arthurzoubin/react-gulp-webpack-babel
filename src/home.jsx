@@ -13,7 +13,7 @@ class Home extends Component {
           <li className="list-group-item">
               <Link to="/demoone">
                 <button type="button" className="btn btn-block btn-primary">
-                Hello World
+                Hello World!
                 </button>
               </Link>
           </li>

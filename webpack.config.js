@@ -5,9 +5,6 @@ var webpack = require('webpack');
 var loaders = require('./webpack.loaders');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const HOST = process.env.HOST || "127.0.0.1";
-const PORT = process.env.PORT || "8888";
-
 // global css
 loaders.push({
 	test: /\.css$/,
@@ -42,7 +39,6 @@ loaders.push({
 module.exports = {
   entry: {
 		index: [
-	    'webpack/hot/dev-server',
 	    path.resolve(__dirname, './src/index.js')
 	  ]
 	},
@@ -57,14 +53,6 @@ module.exports = {
   resolve: {
 		extensions: ['', '.js', '.jsx']
 	},
-  devServer: {
-    hot: true,
-    noInfo: false,
-    inline: true,
-    historyApiFallback: true,
-    port: PORT,
-		host: HOST
-  },
   plugins: [
     new webpack.NoErrorsPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
