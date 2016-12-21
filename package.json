@@ -4,8 +4,8 @@
   "description": "React Gulp Webpack Babel Starter Kit",
   "main": "src/index.jsx",
   "scripts": {
-    "build": "webpack --config webpack.production.config.js --progress --profile --colors",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build"
+    "local": "gulp",
+    "prod": "gulp webpack:build"
   },
   "repository": {
     "type": "git",

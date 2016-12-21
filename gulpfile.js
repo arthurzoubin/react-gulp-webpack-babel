@@ -1,6 +1,7 @@
 let gulp = require("gulp");
 let webpack = require("webpack");
 let webpackDevConfig = require("./webpack.config.js");
+let webpackProdConfig = require("./webpack.production.config.js");
 let WebpackDevServer = require("webpack-dev-server");
 
 gulp.task("default", ["webpack-dev-server"]);
@@ -24,18 +25,10 @@ gulp.task("webpack-dev-server", function(callback) {
 });
 
 
-gulp.task("build-dev", ["webpack:build-dev"], function() {
-	gulp.watch(["src/**/*"], ["webpack:build-dev"]);
-});
-
-gulp.task("webpack:build-dev", function(callback) {
+gulp.task("webpack:build", function(callback) {
 
   // modify some webpack config options
-  let myDevConfig = Object.create(webpackDevConfig);
-  myDevConfig.devtool = "sourcemap";
-  myDevConfig.debug = true;
-	myDevConfig.progress = true;
-	myDevConfig.colors = true;
+  let myDevConfig = Object.create(webpackProdConfig);
 	myDevConfig.contentBase = "build";
 
   // create a single instance of the compiler to allow caching
