@@ -21,13 +21,13 @@ npm install
 * Run development server:
 
 ```
-npm run dev
+npm run local
 ```
 
-Open the web browser to `http://127.0.0.1:8888/build/index.html`
+Open the web browser to `http://127.0.0.1:8888/`
 
 ### To build the production package
 
 ```
-npm run build
+npm run prod
 ```
