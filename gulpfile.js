@@ -1,14 +1,14 @@
-let gulp = require("gulp");
-let webpack = require("webpack");
-let webpackDevConfig = require("./webpack.config.js");
-let webpackProdConfig = require("./webpack.production.config.js");
-let WebpackDevServer = require("webpack-dev-server");
+var gulp = require("gulp");
+var webpack = require("webpack");
+var webpackDevConfig = require("./webpack.config.js");
+var webpackProdConfig = require("./webpack.production.config.js");
+var WebpackDevServer = require("webpack-dev-server");
 
 gulp.task("default", ["webpack-dev-server"]);
 
 gulp.task("webpack-dev-server", function(callback) {
 	// modify some webpack config options
-	let devConfig = Object.create(webpackDevConfig);
+	var devConfig = Object.create(webpackDevConfig);
 	devConfig.devtool = "eval";
 	devConfig.debug = true;
 	devConfig.progress = true;
@@ -28,11 +28,11 @@ gulp.task("webpack-dev-server", function(callback) {
 gulp.task("webpack:build", function(callback) {
 
   // modify some webpack config options
-  let myDevConfig = Object.create(webpackProdConfig);
+  var myDevConfig = Object.create(webpackProdConfig);
 	myDevConfig.contentBase = "build";
 
   // create a single instance of the compiler to allow caching
-  let devCompiler = webpack(myDevConfig);
+  var devCompiler = webpack(myDevConfig);
 
 	// run webpack
 	devCompiler.run(function(err, stats) {
